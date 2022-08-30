@@ -128,17 +128,45 @@
     const prevBtn = document.createElement('button');
     const nextBtn = document.createElement("button"); 
 
-    function arrowStyling(element) {
+    function arrowStylingLeft(element) {
       element.style.position = "absolute";
+      element.style.left = "5vh";
+      element.style.top = "25vw";
+      element.content = "";
+      element.style.width = "50px";
+      element.style.height = "50px";
+      element.style.border = "none";
+      element.style.backgroundColor = "#fff";
+      element.style.borderTop = "5px solid #000";
+      element.style.borderRight = "5px solid #000";
+      element.style.transform = "rotate(225deg)";
+    }
+    function arrowStylingRight(element) {
+      element.style.position = "absolute";
+      element.style.left = "155vh";
+      element.style.top = "25vw";
+      element.content = "";
+      element.style.width = "50px";
+      element.style.height = "50px";
+      element.style.border = "none";
+      element.style.backgroundColor = "#fff";
+      element.style.borderTop = "5px solid #000";
+      element.style.borderRight = "5px solid #000";
+      element.style.transform = "rotate(45deg)";
     }
 
-    prevBtn.style.position = "absolute";
-    domStyling.size(prevBtn, "50px", "50px");
-    prevBtn.style.marginRight = "90vw";
+    console.dir(prevBtn);
+    arrowStylingLeft(prevBtn);
+    arrowStylingRight(nextBtn);
 
-    nextBtn.style.position = "absolute";
-    domStyling.size(nextBtn, "50px", "50px");
-    nextBtn.style.marginLeft = "90vw";
+
+    // prevBtn.style.position = "absolute";
+    // domStyling.size(prevBtn, "50px", "50px");
+    // prevBtn.style.marginRight = "90vw";
+
+    // nextBtn.style.position = "absolute";
+    // domStyling.size(nextBtn, "50px", "50px");
+    // nextBtn.style.marginLeft = "90vw";
 
     domInit.root.appendChild(prevBtn);
     domInit.root.appendChild(nextBtn);
